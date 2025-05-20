@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            {% block title %}
+            about page
+            {% endblock%}
+        </title>
+            <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    </head>
+    <body>
+        {% block content %}
+       <marquee> <h1 class="cls">About page</h1></marquee>
+        {% endblock %}
+    </body>
+</html>

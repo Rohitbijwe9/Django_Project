@@ -1,9 +1,7 @@
 from django.urls import path
-from . views import AboutApi,CareerApi,ContactApi
 
+from .views import Mycontact
 
-urlpatterns=[
-    path('about/',AboutApi,name='about_url'),
-    path('contact/',ContactApi,name='contact_url'),
-    path('carrer/',CareerApi,name='career_url')
+urlpatterns = [
+    path('mycont/<str:nm>/', Mycontact, name='mycontact_url'),  
 ]
