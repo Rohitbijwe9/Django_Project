@@ -13,7 +13,7 @@ This is a basic Django project.
 ### Prerequisites
 
 - Python 3.x
-- Django (version used in this project)
+- Django 
 
 ### Installation
 
