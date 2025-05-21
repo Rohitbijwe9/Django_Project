@@ -27,8 +27,8 @@ urlpatterns = [
     path('aboutpg/',AboutPage,name='about_url'),
     path('contctpg/',ContactPage,name='contact_url'),
     path('info/',MynfoView),
-    path('mycon/<str:nm>/',Mycontact)
-    #path('',include('app1.urls'))
+    path('mycon/<str:nm>/',Mycontact),
+    path('',include('app1.urls'))
     
 
     

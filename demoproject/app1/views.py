@@ -60,3 +60,30 @@ def MynfoView(request):
 
 def Mycontact(request, nm):
     return HttpResponse(f'Hello  {nm}')
+
+
+
+def contextview(request):
+    template_name='app1/context.html'
+    l=[2,3,5,7,8,1,0,9]
+    
+    context={'data':l}
+    return render(request,template_name,context)
+
+
+class Student:
+    def __init__(self,roll,nm,marks):
+        self.roll = roll
+        self.name = nm
+        self.marks = marks
+
+S1=Student(9,'rohit',75)
+S2=Student(7,'priti',70)
+S3=Student(6,'akshay',77)
+
+
+def studentView(request):
+    template_name='app1/student.html'
+    s_list=[S1,S2,S3]
+    context={'data':s_list}
+    return render(request,template_name,context)

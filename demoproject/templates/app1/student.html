@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+    <table border="2px">
+        <thead>
+            <th>ROLL</th>
+            <th>NAME</th>
+            <th>Marks</th>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+            <td>{{i.roll}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.marks}}</td>
+            </tr>
+            </tbody>
+
+
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>>
