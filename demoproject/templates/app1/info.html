@@ -1,8 +1,12 @@
+{% extends 'base.html' %}
+
 {% load static %}
 <html>
     <head>
         <title>
+            {% block title %}
             info form
+            {% endblock %}
         </title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -12,6 +16,7 @@
 
 
     </head>
+    {% block content %}
     <body><br/><br/>
         <center>
         <div class="card">
@@ -34,5 +39,6 @@
         </center>
 
     </body>
+    {% endblock %}
     </body>
 </html>

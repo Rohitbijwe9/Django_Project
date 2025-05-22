@@ -65,9 +65,13 @@ def Mycontact(request, nm):
 
 def contextview(request):
     template_name='app1/context.html'
+    student_deatils=[
+            {'name': 'ABC', 'phone': 12345},
+            {'name':'testing','phone':578797}]
     l=[2,3,5,7,8,1,0,9]
+    title='context page'
     
-    context={'data':l}
+    context={'data':l,'title':title,'std':student_deatils}
     return render(request,template_name,context)
 
 
@@ -84,6 +88,9 @@ S3=Student(6,'akshay',77)
 
 def studentView(request):
     template_name='app1/student.html'
+    title='student data'
     s_list=[S1,S2,S3]
-    context={'data':s_list}
+    context={'data':s_list,'title':title}
     return render(request,template_name,context)
+
+

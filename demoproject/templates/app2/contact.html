@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+
+{% block title %}Contact - Rohit Bijwe Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4" style="color: #3b82f6;">Get in Touch</h2>
+
+  <div class="row">
+    <!-- Contact Form -->
+    <div class="col-md-6 mb-4">
+      <form method="post" action="#">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="col-md-6">
+      <h5>Contact Info</h5>
+      <p><strong>Email:</strong> <a href="mailto:bijwerohit9@gmail.com">bijwerohit9@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 7066307511</p>
+      <p><strong>Location:</strong> Pune, Maharashtra, India</p>
+
+      <h5 class="mt-4">Follow Me</h5>
+      <div class="social-icons">
+        <a href="https://github.com/Rohitbijwe9" target="_blank" class="me-3 fs-4 text-dark"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rohit-bijwe-913366324/" target="_blank" class="me-3 fs-4 text-primary"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:bijwerohit9@gmail.com" class="fs-4 text-danger"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
